@@ -1,29 +1,25 @@
 import os
 import discord
+from discord.ext import commands
 import requests
 import json
 from keep_alive import keep_alive
 
-client = discord.Client()
-
-def get_quote():
-  response = requests.get("https://zenquotes.io/api/random")
-  json_data = json.loads(response.text)
-  quote = json_data[0]['q'] + " -" + json_data[0]['a']
-  return quote
+client = commands.Bot(command_prefix = ".")
 
 @client.event
 async def on_ready():
   print("{0.user}".format(client) + " ready for action!")
 
-@client.event
-async def on_message(message):
-  if message.author == client.user:
-    return;
-  
-  if message.content.startswith('.quote'):
-    quote = get_quote()
-    await message.channel.send(quote)
-    
+inital_extension = []
+
+for filename in os.listdir('./cogs'):
+  if filename.endswith('.py'):
+    inital_extension.append("cogs." +filename[:-3])
+
+if __name__ == '__main__':
+  for extension in inital_extension:
+    client.load_extension(extension)
+
 keep_alive()
 client.run(os.environ['password'])
