@@ -157,6 +157,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "nbt"
+version = "1.5.0"
+description = "Named Binary Tag Reader/Writer"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "3.10.0.2"
 description = "Backported and Experimental Type Hints for Python 3.5+"
@@ -190,7 +198,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d7bc08a14935548d74ab3478bd387d52db97d2eb14a788c228b8a4b987b05279"
+content-hash = "cfb10259d821162c31ff8443c52ba2fcebbf912e91b80804db0da2dcfcc4e891"
 
 [metadata.files]
 aiohttp = [
@@ -420,6 +428,11 @@ multidict = [
     {file = "multidict-5.2.0-cp39-cp39-win32.whl", hash = "sha256:1c7976cd1c157fa7ba5456ae5d31ccdf1479680dc9b8d8aa28afabc370df42b8"},
     {file = "multidict-5.2.0-cp39-cp39-win_amd64.whl", hash = "sha256:c9631c642e08b9fff1c6255487e62971d8b8e821808ddd013d8ac058087591ac"},
     {file = "multidict-5.2.0.tar.gz", hash = "sha256:0dd1c93edb444b33ba2274b66f63def8a327d607c6c790772f448a53b6ea59ce"},
+]
+nbt = [
+    {file = "NBT-1.5.0-py2.py3-none-any.whl", hash = "sha256:77dcf9d3fcb41a04fe7f407e902cf78c1dadc589d2e68d0a77e1b62b64a9be7e"},
+    {file = "NBT-1.5.0-py3-none-any.whl", hash = "sha256:834505e9137d00ab5b098979b4e1d383a14061e80364a7f1b9587839b2743f5e"},
+    {file = "NBT-1.5.0.tar.gz", hash = "sha256:f3585248e6747c6ede39be49a9d54ade8f63ce9beb42a6682c0323d32073c7f9"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.10.0.2-py2-none-any.whl", hash = "sha256:d8226d10bc02a29bcc81df19a26e56a9647f8b0a6d4a83924139f4a8b01f17b7"},
